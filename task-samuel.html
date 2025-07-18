@@ -1,13 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reunião</title>
+  <meta charset="UTF-8">
+  <title>Bem-vindo ao Easy-cut</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ececec;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* lembrar de colocar redes sociais */
+    .menu {
+      background-color: #0c6ce2;
+      color: rgb(0, 0, 0);
+      padding: 25px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .menu a {
+      color: rgb(255, 255, 255);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #091c50;
+    }
+<!-- formulario das tabelas de cortes -->
+    .container {
+      width: 90%;
+      margin: 80px auto 20px auto;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    h2 {
+      color: #030303;
+    }
+
+    /* Formulário fazer arredodado as bordas*/
+    .login-form {
+      flex: 1;
+      min-width: 50px;
+      background-color: #00000000;
+      padding: 100px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form label {
+      margin-top: 30px;
+      display: block;
+      font-weight: bold;
+    }
+
+    .login-form input {
+      width: 90%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 40px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .login-form input {
+      background-color: #dfdada;
+      color: rgb(68, 57, 57);
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .login-form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    /* cortes */
+    .tabelas-corte {
+      flex: 2;
+      min-width: 0px;
+    }
+
+    .corte {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .corte h3 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    .corte p {
+      color: #444;
+    }
+
+    .corte img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 30px;
+      margin-top: 10px;
+    }
+ 
+
+  </style>
 </head>
 <body>
-    <p>atividade</p>
+
+  <!-- O menu superior navegaçao com links pra voltar ao corte -->
+  <div class="menu">
+    <a href="#corte1">Calvão de cria</a>
+    <a href="#corte2">Mid Fade</a>
+    <a href="#corte3">Corte Militar</a>
+    <a href="#corte4">Corte Social</a>
+  </div>
+
+
+  <div class="container">
+    <!-- parte do cadastro -->
+    <form class="login-form" action="/login" method="post">
+      <h2>Cadastro do Cliente</h2>
+      <label for="username">Nome Completo</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="telefone">Telefone</label>
+      <input type="text" id="telefone" name="telefone" required>
+
+      <label for="email">Melhor E-mail</label>
+      <input type="email" id="email" name="email" required>
+      <h3 id="titulo-militar"> Faça seu Agendamento</h3>
+      <input type="datetime-local">
+      <input type="submit" value="Fazer meu Cadastro">
+    </form>
+
+    <!-- Tabelas/Cortes -->
+    <div class="tabelas-corte">
+      <div class="corte" id="corte1">
+        <h3>1. Calvão de Cria <br>R$ 90,00</h3>
+        <p>"Corte bastante famoso pela vergonha alheia"</p>
+        <img src="d8ibj8jw6889lv27brhs3xb06.webp" alt="Calvão de Cria">
+      </div>
+
+      <div class="corte" id="corte2">
+        <h3>2. Mid Fade <br>R$ 40,00</h3>
+        <p>Corte bastante modinha nos anos 2020</p>
+        <img src="mi fade.jpg" alt="Mid Fade">
+      </div>
+
+      <div class="corte" id="corte3">
+        <h3>3. Corte Militar <br>R$ 30,00 </h3>
+        <p>Raspado nas laterais e mais curto em cima. Muito prático e discreto.</p>
+        <img src="americano.jpg" alt="Corte Militar">
+      </div>
+
+      <div class="corte" id="corte4">
+        <h3>4. Corte Social <br>R$25,00 </h3>
+        <p>Corte bastante usado antigamente "trauma desse corte"</p>
+        <img src="corte do aborrecimento.jpg" alt="Corte Social">
+      </div>
+    </div>
+  </div>
 </body>
 </html>
-<BODY style="background-color: rgb(160, 150, 150);"> 
-    
+
